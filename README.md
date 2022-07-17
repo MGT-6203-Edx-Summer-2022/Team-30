@@ -6,10 +6,15 @@
  According to the World Health Organization (WHO) stroke is the 2nd leading cause of death globally, responsible for approximately 11% of total deaths. In this project, the “ Stroke Prediction Dataset” is used to predict whether a patient is likely to get stroke based on the input parameters like gender, age, various diseases, and smoking status. Each row in the data provides relevant information about the patient. The project is delivered following the below five main sections:
  
 ●	Data Exploration and Analysis 
+
 ●	Classification and prediction using Support Vector Machine
+
 ●	Classification and prediction using Logistic Regression
+
 ●	Classification and prediction using Random Forest
+
 ●	Classification and prediction using K-Nearest Neighbor
+
 
 The objective questions that are aimed to be answered at the end of this project are: 
 
