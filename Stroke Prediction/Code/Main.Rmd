@@ -11,7 +11,7 @@ sh(library("ggplot2"))
 sh(library("Hmisc"))
 sh(library("outliers"))
 sh(library("naniar"))
-
+sh(library("GGally"))
 ```
 
 #*******************************************************************************************
@@ -75,6 +75,8 @@ df <- na.omit(df)
 hist(df$avg_glucose_level,xlab = 'Glucose level')
 hist(df$age,xlab = 'Age')
 hist(df$bmi,xlab = 'BMI')
+ggplot(df, aes(x = df$age, fill = df$stroke))+
+  geom_density(alpha = 0.3)
 #table(df$stroke)
 ```
 
@@ -118,7 +120,15 @@ df <- df %>% slice_min(bmi, n = nrow(df)-4)
 df[df$age <= 7, "smoking_status"] <- "never smoked"
 ```
 
-##1.8. The data has been randomly divided to 60% for training, 20% for validation and 20% for testing. 
+##1.8. Looking at the relation between the numerical parameters of the data set that will help judgement in imporving the prediction models. 
+
+```{r}
+df %>%
+    select(age, avg_glucose_level, bmi) %>%
+    ggpairs()
+```
+
+##1.9. The data has been randomly divided to 60% for training, 20% for validation and 20% for testing. 
 
 #**IMPORTNAT NOTES TO REMEMBER FOR EACH METHOD"**
 
