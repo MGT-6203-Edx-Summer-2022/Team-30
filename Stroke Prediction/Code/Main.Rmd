@@ -72,9 +72,9 @@ df <- na.omit(df)
 #1.5. Acknowledging the imbalances in the data set for each variable. 
 
 ```{r}
-#hist(df$avg_glucose_level,xlab = 'Glucose level')
-#hist(df$age,xlab = 'Age')
-#hist(df$bmi,xlab = 'BMI')
+hist(df$avg_glucose_level,xlab = 'Glucose level')
+hist(df$age,xlab = 'Age')
+hist(df$bmi,xlab = 'BMI')
 #table(df$stroke)
 ```
 
